@@ -77,14 +77,11 @@ public class Article {
 	public static final Article createArticle(DataBase db) {
 		try {
 			ResultSet set = db.getStatement().executeQuery("select seq from sqlite_sequence where name=\"articles\";");
-			int seq = -1;
+			int seq = 0;
 			if (set.next()) {
 				seq = set.getInt("seq") + 1;
 			}
-			if (seq == -1) {
-				throw new SQLException();
-			}
-			return new Article(seq, "", 0, "", "", "", 0, 0, 0, 0, 0, 0, 0, 0);
+			return new Article(seq+1, "", 0, "", "", "", 0, 0, 0, 0, 0, 0, 0, 0);
 		} catch (SQLException e) {
 			e.printStackTrace();
 			return null;
