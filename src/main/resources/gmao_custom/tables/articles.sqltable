@@ -1,0 +1,16 @@
+CREATE TABLE IF NOT EXISTS articles (
+	id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	libelle TEXT NOT NULL,
+	brand INTEGER,
+	reference TEXT,
+	note TEXT,
+	place TEXT,
+	quantity FLOAT,
+	unit INT,
+	unit_price FLOAT,
+	quantity_dsm FLOAT,
+	quantity_available FLOAT,
+	quantity_min FLOAT,
+	quantity_max FLOAT,
+	quantity_to_command FLOAT
+);

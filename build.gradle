@@ -1,0 +1,17 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	implementation 'org.xerial:sqlite-jdbc:3.41.2.1'
+	implementation 'com.formdev:flatlaf:3.1.1'
+	implementation 'com.google.code.gson:gson:2.8.6'
+}
+
+application {
+    mainClass = 'gmao_custom.app.Main'
+}
